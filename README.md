@@ -16,3 +16,17 @@ For more information, see the following
 Run ```main.m```
 
 if you use GPU, please set ```params.use_GPU = 1``` in the line15 of ```main.m```
+
+# Reference
+If you use this code, please cite the following paper:
+
+```
+@misc{isono2023robust,
+      title={Robust Spatiotemporal Fusion of Satellite Images: A Constrained Convex Optimization Approach}, 
+      author={Ryosuke Isono and Kazuki Naganuma and Shunsuke Ono},
+      year={2023},
+      eprint={2308.00500},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP}
+}
+```
