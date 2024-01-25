@@ -11,3 +11,8 @@ For more information, see the following
 
 - Project website: https://www.mdi.c.titech.ac.jp/publications/stfusion
 - Preprint paper: https://arxiv.org/abs/2308.00500
+
+# How to use
+Run ```main.m```
+
+if you use GPU, please set ```params.use_GPU = 1``` in the line15 of ```main.m```
