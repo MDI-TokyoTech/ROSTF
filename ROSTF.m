@@ -40,7 +40,7 @@ function [preHt, optproc] = ROSTF(observed, groundtruth, params, output_dir)
     B = @(z) UB(z,params.hsize,params.use_GPU);
     Bt = @(z) UBt(z,params.hsize,params.use_GPU);
     SB = @(z) S(B(z),params.window,params.downsampleloc);
-    BtSt = @(z) Bt(St(z,params.window,params.downsampleloc));
+    BtSt = @(z) Bt(St(z,params.window,params.downsampleloc,params.use_GPU));
     if params.p == 1
         projLpBall = @(z) projFastL1Ball(z, params.alpha);
     elseif params.p == 2

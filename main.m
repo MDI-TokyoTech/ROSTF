@@ -62,7 +62,7 @@ nLc = rowsL*colsL; % Lの1chanにおける画素数
 
 %% Setting parameters
 % use GPU or not
-params.use_GPU = 1;  % 0 if you do not use GPU, 1 if you use GPU
+params.use_GPU = 0;  % 0 if you do not use GPU, 1 if you use GPU
 
 % the way of downsampling
 params.hsize = 20;  % size of averaging filter as a blurring operator
@@ -71,7 +71,7 @@ params.downsampleloc = 'c'; % location of the pixel taken when downsampling ('lt
 B = @(z) UB(z,params.hsize,params.use_GPU);
 Bt = @(z) UBt(z,params.hsize,params.use_GPU);
 SB = @(z) S(B(z),params.window,params.downsampleloc);
-BtSt = @(z) Bt(St(z,params.window,params.downsampleloc));
+BtSt = @(z) Bt(St(z,params.window,params.downsampleloc,params.use_GPU));
 
 % the balancing parameter
 params.lambda = 1;
