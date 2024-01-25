@@ -1,4 +1,4 @@
-function result = St(I,window,loc)
+function result = St(I,window,loc,use_GPU)
     %ST この関数の概要をここに記述
     %   詳細説明をここに記述
 %     [rows, cols, chan] = size(I);
@@ -7,7 +7,11 @@ function result = St(I,window,loc)
     [rows, cols, chan] = size(I);
 %     result = gpuArray(zeros([rows*window, cols*window, chan]));
 %     result(1:window:rows*window, 1:window:cols*window, :) = I;
-    mask = gpuArray(zeros(window, window));
+    if use_GPU == 1
+        mask = gpuArray(zeros(window, window));
+    else
+        mask = zeros(window, window);
+    end
     if loc == 'lt'
         mask(1, 1) = 1;
     elseif loc=='c'
