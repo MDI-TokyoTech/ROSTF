@@ -1,4 +1,4 @@
-# Robust_Spatiotemporal_Fusion_of_Satellite_Images_A_Constrained_Convex_Optimization_Approach
+# ROSTF
 This is a demo code of the method proposed in the following reference:
 
 R.Isono, K. Naganuma, and S. Ono
