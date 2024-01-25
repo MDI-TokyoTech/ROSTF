@@ -11,6 +11,9 @@
 % Copyright (c) 2023 Ryosuke Isono, Kazuki Naganuma, and Shunsuke Ono
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% use GPU or not
+params.use_GPU = 0;  % 0 if you do not use GPU, 1 if you use GPU
+
 %% Adding path
 addpath(genpath('./sub_functions'));
 
@@ -57,12 +60,10 @@ nH = numel(Hr_GT);
 nL = numel(Lr_GT);
 [rowsH, colsH, chans] = size(Hr_GT);
 [rowsL, colsL, chans] = size(Lr_GT);
-nHc = rowsH*colsH; % Hの1chanにおける画素数
-nLc = rowsL*colsL; % Lの1chanにおける画素数
+nHc = rowsH*colsH;
+nLc = rowsL*colsL;
 
 %% Setting parameters
-% use GPU or not
-params.use_GPU = 0;  % 0 if you do not use GPU, 1 if you use GPU
 
 % the way of downsampling
 params.hsize = 20;  % size of averaging filter as a blurring operator
