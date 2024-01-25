@@ -13,7 +13,6 @@
 
 %% Adding path
 addpath(genpath('./sub_functions'));
-addpath(genpath('./methods'));
 
 for p = [1 2]
 for site_idx = [1 2]
@@ -38,7 +37,7 @@ nsigl = 0; % standard deviation of Gaussian noise on LR images
 spratel = 0; % superimposition ratio of sparse noise on LR images
 
 % loading data
-data_file = append('../trimmed_dataset/',site,'/',datatype,'/');
+data_file = append('dataset/',site,'/',datatype,'/');
 data_file = append(data_file,'nsigh=',num2str(nsigh));
 data_file = append(data_file,'_nsigl=',num2str(nsigl));
 data_file = append(data_file,'_sprateh=',num2str(sprateh));
@@ -129,7 +128,7 @@ params.gamma1 = [1/18 1/17 1 1 1];
 params.gamma2 = [1/5 1/5 1/5 1/5 1/5 1/5];
 
 %% Making output directory
-output_dir = append('trimmed_Results_forMesureTime/ROSTF-',num2str(params.p));
+output_dir = append('Results/ROSTF-',num2str(params.p));
 output_dir = append(output_dir, '/', site, '_');
 output_dir = append(output_dir, datatype);
 output_dir = append(output_dir, '_nsigh=', num2str(nsigh));
