@@ -6,7 +6,7 @@
 % ``Robust Spatiotemporal Fusion of Satellite Images: A Constrained Convex Optimization Approach.''
 %
 % Update history:
-% October 7, 2023: v1.0 
+% Jan 25, 2024: v1.0 
 %
 % Copyright (c) 2023 Ryosuke Isono, Kazuki Naganuma, and Shunsuke Ono
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
